@@ -34,10 +34,10 @@ export function Registro(){
     return(
 
         <main className="container">
-            <h1 className="mt-4">Registro</h1>
+            <h1 className="mt-5">Registro</h1>
     
             <form onSubmit={handleSalvar}>
-                <div className="row mt-5">
+                <div className="row mt-2">
                     <div className="col">
                         <input 
                             type="text"
