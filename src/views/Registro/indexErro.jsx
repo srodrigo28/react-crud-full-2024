@@ -1,41 +1,43 @@
 import "./registro.css"
 
-import { useState } from "react";
+import { useState } from "react"
 
-export function Registro(){
 
-    const [nome, setNome] = useState('');
-    const [email, setEmail] = useState('');
-    const [telefone, setTelefone] = useState('');
-    const [sexo, setSexo] = useState('');
-    const [senha, setSenha] = useState('');
-    const [senhaC, setSenhaC] = useState('');
+const [nome, setNome] = useState('')
+const [email, setEmail] = useState('')
+const [telefone, setTelefone] = useState('')
 
-    const handleSalvar = (e) => {
-        e.preventDefaul()
-    
-        if(nome === ''){
-            alert('Por favor preencher o campo nome!')
-        }else if(email === ''){
-            alert('Por favor preencher o campo email!')
-        }else if(telefone === ''){
-            alert('Por favor preencher o campo telefone!')
-        }
-        else if(sexo === ''){
-            alert('Por favor preencher o campo sexo!')
-        }else if(senha === ''){
-            alert('Por favor preencher o campo senha!')
-        }else if(senhaC === ''){
-            alert('Por favor preencher o campo confirmar senha!')
-        }
+const [sexo, setSexo] = useState('')
+const [senha, setSenha] = useState('')
+const [senhaC, setSenhaC] = useState('')
+
+
+const handleSalvar = (e) => {
+    e.preventDefaul()
+
+    if(nome === ''){
+        alert('Por favor preencher o campo nome!')
+    }else if(email === ''){
+        alert('Por favor preencher o campo email!')
+    }else if(telefone === ''){
+        alert('Por favor preencher o campo telefone!')
     }
-    
+    else if(sexo === ''){
+        alert('Por favor preencher o campo sexo!')
+    }else if(senha === ''){
+        alert('Por favor preencher o campo senha!')
+    }else if(senhaC === ''){
+        alert('Por favor preencher o campo confirmar senha!')
+    }
+}
 
+
+export function RegistroErr(){0
     return(
 
         <main className="container">
             <h1 className="mt-4">Registro</h1>
-    
+
             <form onSubmit={handleSalvar}>
                 <div className="row mt-5">
                     <div className="col">
@@ -49,7 +51,7 @@ export function Registro(){
                     </div>
                     <div className="col">
                         <input 
-                            type="text"
+                            type="text" 
                             value={email}
                             placeholder="e-mail"
                             className="form-control"
@@ -75,8 +77,8 @@ export function Registro(){
                     </div>
                     <div className="col">
                         <input 
-                            type="password"
-                            value={senha} 
+                            value={senha}
+                            type="password" 
                             placeholder="senha"
                             className="form-control"
                             onChange={ e => setSenha(e.target.value)}
@@ -84,11 +86,12 @@ export function Registro(){
                     </div>
                     <div className="col">
                         <input 
-                            type="password" 
                             value={senhaC}
+                            type="password" 
                             className="form-control"
                             placeholder="confirmar-senha"
                             onChange={ e => setSenhaC(e.target.value)}
+
                         />
                     </div>
                 </div>
